@@ -1,0 +1,207 @@
+%-------------------------
+% Curriculum Vitae en Latex
+% Auteur : Anonyme
+% Basé sur : https://github.com/sb2nov/resume
+% Licence : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xcolor} % Nouveau package pour la couleur
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------OPTIONS DE POLICE----------
+% Choisissez votre police préférée (décommentez le package désiré)
+% Exemples :
+\usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % Efface tous les en-têtes et pieds de page
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\definecolor{blue(pigment)}{rgb}{0.2, 0.2, 0.6}
+
+
+% Ajustez les marges
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Formatage des sections
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Nouvelle commande pour les sous-entêtes d'expérience
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+% Assurez-vous que le PDF généré est lisible par machine/analysable par ATS
+\pdfgentounicode=1
+
+%-------------------------
+% Commandes personnalisées
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV COMMENCE ICI  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------EN-TÊTE----------
+\begin{center} 
+    \textbf{\Huge \scshape Anonyme} \\ \vspace{1pt}
+    \small 07 00 00 00 00 $|$ \href{mailto:anonyme@example.com}{\underline{anonyme@example.com}} $|$ 
+    \href{https://www.linkedin.com/in/anonyme}{\underline{linkedin}} $|$
+    \href{https://github.com/anonyme}{\underline{github}}\\
+\end{center}
+{Recherche d'un contrat en \textbf{Développement Web} sur Ville (Octobre 2025)}
+
+%-----------EXPÉRIENCE-----------
+\section{Expériences}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\color{blue(pigment)}Développeur logiciel (alternance) $|$ \emph{\color{black}\normalfont SQL, Microsoft SQL Server, Symfony}}{Sep. 2023 -- Actuel}
+      {Entreprise A}{Ville, France}
+      \resumeItemListStart
+        \resumeItem{Restructuration d'un outil de plannification interne}
+        \resumeItem{Amélioration de la performance}
+        \resumeItem{Diminution du nombre de bases de données de  400\%}
+        \resumeItem{Force de proposition et organisateur d'échanges entre diférents acteurs du projet}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\color{blue(pigment)}Développeur logiciel (stage) $|$ \emph{\color{black}\normalfont Java, Google Or-tools}}{Jan. 2022 -- Fév. 2022}
+      {Entreprise B}{Ville, France}
+      \resumeItemListStart
+        \resumeItem{Réalisation d'une application de gestion des emplois du temps}
+        \resumeItem{Apprentissage en autonomie et application de la programmation par contrainte}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\color{blue(pigment)}Développeur logiciel (stage) $|$ \emph{\color{black}\normalfont PHP, SQL, HTML/CSS}}{Mai 2021 -- Juin 2021}
+      {Entreprise C}{Ville, France}
+      \resumeItemListStart
+        \resumeItem{Nettoyage de données Excel et transfert dans BDD locale}
+        \resumeItem{Traitement de ces données et réalisation d'un tableau de bord hebdomadaire}
+        \resumeItem{Réalisation d'une interface web}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------FORMATION-----------
+\section{Formation}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\color{blue(pigment)}Master : Expert en Ingénierie Logicielle}{Sep. 2023 -- Actuel}
+      {École A}{Ville, France}
+    \resumeSubheading
+      {\color{blue(pigment)}BSc en Informatique}{Sep. 2022 -- Mai 2023}
+      {École B}{Ville, Pays}
+    \resumeSubheading
+      {\color{blue(pigment)}BTS SIO (option SLAM (Solutions Logicielles et Applications Métiers))}{Sep. 2021 -- Mai 2022}
+      {École C}{Ville, France}
+  \resumeSubHeadingListEnd
+
+%-----------PROJETS-----------
+\section{Projets}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{\color{blue(pigment)}\href{https://github.com/anonyme/Rest_API_lol}{\underline{Blog Web API REST}}} $|$ \emph{Node.js (Express), MongoDB}}{}
+      \resumeItemListStart
+        \resumeItem{Développement d'un module d'ajout de pages de blog}
+        \resumeItem{Développement d'un module de connexion et d'interaction entre utilisateurs}
+      \resumeItemListEnd
+  
+    \resumeProjectHeading
+      {\textbf{\color{blue(pigment)}\href{https://github.com/anonyme/}{\underline{App Web clone StackOverflow}}} $|$ \emph{Angular, Node.js (Express), MongoDB, Bootstrap}}{}
+      \resumeItemListStart
+        \resumeItem{Création de modules de commentaires et de votes}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+     {\textbf{\color{blue(pigment)} \href{https://github.com/anonyme/}{\underline{Gestion de Portefeuille Crypto}}} $|$ \emph{Python, Matplotlib, Deap, Simanneal}}{}
+      \resumeItemListStart
+        \resumeItem{Projet de simulation optimisant le portefeuille de cryptomonnaies basé sur la méthode du recuit simulé}
+        \resumeItem{Développement d'un algorithme pour parcourir lesdifferentes solutions} \resumeItem{Visualisation des données avec matplotlib} \resumeItemListEnd \resumeSubHeadingListEnd
+
+%-----------COMPÉTENCES TECHNIQUES-----------
+\section{Compétences Techniques}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Langages (dev) :} HTML/CSS, PHP, JavaScript, TypeScript, SQL, NoSQL (orienté objet), Python, C, C++, Java\\
+      \textbf{Frameworks :} .Net, React, Node.js (Express), Angular.js, Symfony\\
+      \textbf{Outils de Développement :} Git, Docker\\
+      \textbf{Bases de données :} MySQL (SQL), Microsoft SQL Server (SQL), MongoDB (noSQL)\\
+      \textbf{CMS :} WordPress\\
+      \textbf{Langues :} Français (langue maternelle), Anglais (TOIEC: 945/990), Espagnol (B1) \\
+    }}
+  \end{itemize}
+
+%-----------COMPÉTENCES & INTÉRÊTS-----------
+\section{Activités}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Sports :} Boxe (6 ans), Basketball \\
+      \textbf{Intérêts :} Cinéma, Mouvement surréaliste \\
+    }}
+  \end{itemize}
+
+
+\end{document}
